@@ -10,8 +10,8 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Route path="/" exact component={HomePage} />
-      <Route path="/home" exact component={HomePage} />
-      <Route path="/login" exact component={LogInPage} />
+      <Route path="/home"  component={HomePage} />
+      <Route path="/login"  component={LogInPage} />
 
     </Router>
   );
