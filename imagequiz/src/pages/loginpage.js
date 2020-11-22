@@ -1,5 +1,5 @@
 const LogInPage = () => {
-    return (<div>
+    return (<div >
     Here is the login page.
     </div>)
 };
