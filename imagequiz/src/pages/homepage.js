@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+
 import "./homepage.css";
 
 const HomePage = () => {
@@ -31,6 +33,14 @@ const HomePage = () => {
 
   return (
     <div className="App">
+      <div className="nav">
+        <Button variant="outlined" color="primary" href="./home">
+          Home
+        </Button>
+        <Button variant="outlined" color="primary" href="./login">
+          Login
+        </Button>
+      </div>
       <div className="row">
         {flowers.map((flower, index) => {
           if (index < 4) {
@@ -64,14 +74,7 @@ const HomePage = () => {
         })}
       </div>
 
-      <div className="row link">
-      <a className="home-page" href="./home">
-        Home Page
-    </a>
-        <a className="login-page" href="./login">
-          Login Page
-        </a>
-      </div>
+     
     </div>
   );
 };
