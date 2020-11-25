@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 
 import "./homepage.css";
 
-const HomePage = () => {
+const HomePage = (props) => {
   class Flower {
     constructor(name, pictureName) {
       this.name = name;
@@ -33,14 +33,16 @@ const HomePage = () => {
 
   return (
     <div className="App">
-      <div className="nav">
-        <Button variant="outlined" color="primary" href="./home">
-          Home
-        </Button>
-        <Button variant="outlined" color="primary" href="./login">
-          Login
-        </Button>
-      </div>
+
+    <div className="nav">
+    <Button variant="outlined" color="primary" href="./home">
+    Home
+    </Button>
+    <Button variant="outlined" color="primary" href="./login">
+    Login
+    </Button>
+  </div>
+  <div className='hint'>You can click on any pictures.</div>
       <div className="row">
         {flowers.map((flower, index) => {
           if (index < 4) {
@@ -50,6 +52,8 @@ const HomePage = () => {
                   src={require("../images/" + flower.picture).default}
                   className="flower"
                   alt={flower.name}
+                  onClick = {() =>{props.history.push(`./${flower.name}`)}}
+
                 />
                 <div className="description">{flower.name}</div>
               </div>
@@ -61,11 +65,12 @@ const HomePage = () => {
         {flowers.map((flower, index) => {
           if (index >= 4) {
             return (
-              <div className="container">
+              <div className="container" >
                 <img
                   src={require("../images/" + flower.picture).default}
                   className="flower"
                   alt={flower.name}
+                  onClick = {() =>{props.history.push(`./${flower.name}`)}}
                 />
                 <div className="description">{flower.name}</div>
               </div>
@@ -74,7 +79,6 @@ const HomePage = () => {
         })}
       </div>
 
-     
     </div>
   );
 };

@@ -1,0 +1,12 @@
+.question {
+    text-align: left;
+    margin-top: 2rem;
+    margin-left:2rem;
+  }
+  
+  .MuiFormLabel-root{
+    color: rgba(0, 0, 0, 1);
+    align-items: center;
+    display: flex;
+  }
+  
