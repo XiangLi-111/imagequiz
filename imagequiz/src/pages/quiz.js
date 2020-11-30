@@ -169,7 +169,6 @@ class Quiz extends React.Component {
             color="primary"
             onClick = {() =>{
               this.props.history.push(`.${this.props.match.path}`);
-              this.props.history.go();
             }}
           >
             Restart Quiz
