@@ -3,12 +3,14 @@ import Button from "@material-ui/core/Button";
 
 import "./login.css";
 
-const LogInPage = () => {
+const LogInPage = (props) => {
     return (
         <div className="App">
 
         <div className="nav">
-        <Button variant="outlined" color="primary" href="./home">
+        <Button variant="outlined" color="primary" onClick = {() =>{
+              props.history.push(`./home`);
+            }}>
         Back To Home
         </Button>
         

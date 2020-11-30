@@ -122,10 +122,16 @@ class Quiz extends React.Component {
       <div className="quiz">
 
         <div className="nav">
-          <Button variant="outlined" color="primary" href="./home">
+          <Button variant="outlined" color="primary" 
+          onClick = {() =>{
+              this.props.history.push(`./home`);
+            }}>
           Home
           </Button>
-          <Button variant="outlined" color="primary" href="./login">
+          <Button variant="outlined" color="primary" 
+          onClick = {() =>{
+              this.props.history.push(`./login`);
+            }}>
           Login
           </Button>
         </div>
@@ -162,7 +168,8 @@ class Quiz extends React.Component {
             variant="contained"
             color="primary"
             onClick = {() =>{
-              this.props.history.push(`.${this.props.match.path}`)
+              this.props.history.push(`.${this.props.match.path}`);
+              this.props.history.go();
             }}
           >
             Restart Quiz

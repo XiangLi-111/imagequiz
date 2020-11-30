@@ -35,10 +35,14 @@ const HomePage = (props) => {
     <div className="App">
 
     <div className="nav">
-    <Button variant="outlined" color="primary" href="./home">
+    <Button variant="outlined" color="primary" onClick = {() =>{
+              props.history.push(`./home`);
+            }}>
     Home
     </Button>
-    <Button variant="outlined" color="primary" href="./login">
+    <Button variant="outlined" color="primary" onClick = {() =>{
+              props.history.push(`./login`);
+            }}>
     Login
     </Button>
   </div>
