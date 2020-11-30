@@ -161,7 +161,9 @@ class Quiz extends React.Component {
           <Button
             variant="contained"
             color="primary"
-            onClick = {() =>{props.history.push(`./${this.props.match.path}`)}}
+            onClick = {() =>{
+              this.props.history.push(`.${this.props.match.path}`)
+            }}
           >
             Restart Quiz
           </Button>
